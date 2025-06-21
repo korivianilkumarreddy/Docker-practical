@@ -1,2 +1,24 @@
 Flask==2.3.2
 Werkzeug==2.3.6
+
+# guide to docker end to end notes
+Install Docker Desktop  
+Sign in to Dockerhub and Docker Desktop  
+Docker Desktop:  
+> Check docker install: cli -> "docker"  
+> Pull the hello-world image and run it  
+  
+Build docker image: docker build -t flask-docker-demo .  
+Run the container: docker run -p 5000:5000 flask-docker-demo  
+Tag your image: docker tag flask-docker-demo 9329256041/flask-docker-demo:latest1  
+Assure that you arere logged in: docker login  
+Push image to dockerhub: docker push vikash95/flask-docker-demo:latest1  
+Pull image from dockerhub: docker pull vikash95/flask-docker-demo:latest1  
+Run the Pulled image: docker run -p 5000:5000 vikash95/flask-docker-demo:latest1  
+
+flask-docker-demo== anil-docker--->that is application name
+9329256041 this is dockerhub id 
+Tag your image: docker tag anil-docker 9329256041/anil-docker:latest1 
+docker push 9329256041/anil-docker:latest1
+
+docker run -p 5000:5000 vikash95/mlops-docker-demo:latest
